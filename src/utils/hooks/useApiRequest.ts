@@ -13,7 +13,7 @@ type UseApiRequestReturnType<T> = State<T> & {
     refetch: (config?: AxiosRequestConfig) => void;
 };
 
-function useApiRequest<T = any>(initialConfig: AxiosRequestConfig): UseApiRequestReturnType<T> {
+function useApiRequest<T>(initialConfig: AxiosRequestConfig): UseApiRequestReturnType<T> {
     const [state, setState] = useState<State<T>>({
         data: null,
         error: null,
